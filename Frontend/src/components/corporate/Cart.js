@@ -485,8 +485,9 @@ const handleQuantityChange = (index, value) => {
 
 };
 
- 
+ console.log("hello",userAddressDetails.address)
 
+ const isDisabled = userAddressDetails.address === '' || sortedData.length === 0;
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
@@ -519,19 +520,19 @@ const handleQuantityChange = (index, value) => {
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
     <div>
       <p className="font-bold">Name:</p>
-      <p className='text-gray-700'>{userAddressDetails.Name || 'Not provided'}</p>
+      <p className='text-gray-700'>{userAddressDetails.Name || ''}</p>
     </div>
     <div>
       <p className="font-bold">Email:</p>
-      <p className='text-gray-700'>{emails || 'Not provided'}</p>
+      <p className='text-gray-700'>{emails || ''}</p>
     </div>
     <div>
       <p className="font-bold">Phone Number:</p>
-      <p className='text-gray-700'>{userAddressDetails.PhoneNumber || 'Not provided'}</p>
+      <p className='text-gray-700'>{userAddressDetails.PhoneNumber || ''}</p>
     </div>
     <div>
       <p className="font-bold">Address:</p>
-      <p className='text-gray-700'>{userAddressDetails.address || 'Not provided'}</p>
+      <p className='text-gray-700'>{userAddressDetails.address || ''}</p>
     </div>
   </div>
   
@@ -619,17 +620,19 @@ const handleQuantityChange = (index, value) => {
         <div className="flex justify-between items-center max-w-6xl mx-auto">
           <h2 className="text-lg font-bold">Total: ₹{Total}/-</h2>
             {/* Pay Now button - disabled when cart is empty */}
-    <button
-      className={`p-2 px-4 rounded-lg shadow-md transition 
-        ${sortedData.length === 0
-          ? 'bg-gray-300 cursor-not-allowed' // Faded button when disabled
-          : 'bg-purple-600 text-white hover:bg-purple-700' // Normal button
-      }`}
-      onClick={handleViewPayment}
-      disabled={sortedData.length === 0} // Disable button when cart is empty
-    >
-      Pay Now
-    </button>
+
+<button
+  className={`p-2 px-4 rounded-lg shadow-md transition 
+    ${isDisabled 
+      ? 'bg-gray-300 cursor-not-allowed' // Faded button when disabled
+      : 'bg-purple-600 text-white hover:bg-purple-700' // Normal button
+    }`}
+  onClick={handleViewPayment}
+  disabled={isDisabled} // Disable if cart is empty or address is missing
+>
+  Pay Now
+</button>
+
         </div>
       </footer>
 

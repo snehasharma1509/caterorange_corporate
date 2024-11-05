@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 1
+    },
+    "auditLog": "/home/harshitha/Documents/caterorange_sneha/caterorange_corporate/Backend/src/config/logs/.ba40375e9e6bdc34afae6a4b6c34f054b09525dd-audit.json",
+    "files": [
+        {
+            "date": 1730813306907,
+            "name": "/home/harshitha/Documents/caterorange_sneha/caterorange_corporate/Backend/src/config/logs/error-2024-11-05.log",
+            "hash": "512a02fa5fad4c5b8fe7503f7e15d989f60720a1f0c402e2e3a32720c6f0d628"
+        }
+    ],
+    "hashType": "sha256"
+}
