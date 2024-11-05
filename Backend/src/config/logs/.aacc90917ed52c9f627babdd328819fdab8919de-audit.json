@@ -9,6 +9,11 @@
             "date": 1730813306899,
             "name": "/home/harshitha/Documents/caterorange_sneha/caterorange_corporate/Backend/src/config/logs/application-2024-11-05.log",
             "hash": "a6dfaef0b038762d905494aec68d2c44c2750d2753eab05f61bffc3e9c3bd9be"
+        },
+        {
+            "date": 1730831490460,
+            "name": "/home/harshitha/Documents/caterorange_sneha/caterorange_corporate/Backend/src/config/logs/application-2024-11-06.log",
+            "hash": "e644ea4d3ceeec130b8fa8acd774fa70e0d96c1b1d480fde4c818b777428c050"
         }
     ],
     "hashType": "sha256"

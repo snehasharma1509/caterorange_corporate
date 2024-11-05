@@ -33,7 +33,6 @@ const MyCart = () => {
 
  const [userData, setUserData] = useState({
  Name: '',
- email: '',
  PhoneNumber: '',
  address: '',
  id: ''
@@ -86,7 +85,7 @@ const MyCart = () => {
  setUserAddressDetails(prevData => ({
  ...prevData,
  Name: parsedAddress.ship_to_name || parsedAddress.default_name || prevData.Name,
- PhoneNumber: parsedAddress.ship_to_phone_number || prevData.PhoneNumber,
+ phonenumber: parsedAddress.ship_to_phone_number || prevData.phonenumber,
  address: formattedAddress
  }));
  } catch (error) {
@@ -96,7 +95,7 @@ const MyCart = () => {
  setUserAddressDetails(prevData => ({
  ...prevData,
  Name: userData.Name,
- PhoneNumber: userData.PhoneNumber,
+ phonenumber: userData.PhoneNumber,
  address:userData.address
  }));
  }
@@ -419,7 +418,7 @@ const PaymentDetails= async(corporateorder_generated_id)=>{
  setUserAddressDetails(prevData => ({
  ...prevData,
  Name: ChangedAddress.ship_to_name || ChangedAddress.default_name || prevData.Name,
- PhoneNumber: ChangedAddress.ship_to_phone_number || prevData.PhoneNumber,
+ PhoneNumber: ChangedAddress.ship_to_phone_number || prevData.phonenumber,
  address: `${ChangedAddress.line1}, ${ChangedAddress.line2}, ${ChangedAddress.pincode}`
  })
 
@@ -437,7 +436,7 @@ const PaymentDetails= async(corporateorder_generated_id)=>{
  setUserAddressDetails(prevData => ({
  ...prevData,
  Name: address.ship_to_name || address.default_name || prevData.Name,
- PhoneNumber: address.ship_to_phone_number || prevData.PhoneNumber,
+ PhoneNumber: address.ship_to_phone_number || prevData.phonenumber,
  address: `${address.line1}, ${address.line2}, ${address.pincode}`
  }));
  handleAddressFormToggle();
@@ -524,11 +523,12 @@ const handleQuantityChange = (index, value) => {
     </div>
     <div>
       <p className="font-bold">Email:</p>
-      <p className='text-gray-700'>{emails || ''}</p>
+      <p className='text-gray-700'>{userAddressDetails.Name === '' ? '' : emails}</p>
+
     </div>
     <div>
       <p className="font-bold">Phone Number:</p>
-      <p className='text-gray-700'>{userAddressDetails.PhoneNumber || ''}</p>
+      <p className='text-gray-700'>{userAddressDetails.phonenumber || ''}</p>
     </div>
     <div>
       <p className="font-bold">Address:</p>
