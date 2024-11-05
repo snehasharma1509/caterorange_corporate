@@ -280,19 +280,20 @@ const handleDecrement = async (index) => {
  const handleAddressFormToggle = () => {
  setIsAddressFormOpen(!isAddressFormOpen);
  };
-
+console.log('id',sortedData)
  const handleViewPayment = async () => {
 
         try {
           
         for (let i = 0; i < sortedData.length; i++) {
-        // const content = cartIndividualData[i].content;
+        const content = sortedData[i];
+
         const Data = {
-        category_id: sortedData.id,
-        processing_date: sortedData.Date,
+        category_name: content.type,
+        processing_date: content.date,
         delivery_status: 'shipped',
-        quantity: sortedData.quantity,
-        active_quantity: sortedData.quantity,
+        quantity: content.quantity,
+        active_quantity: content.quantity,
         media: null,
         delivery_details: null
         };

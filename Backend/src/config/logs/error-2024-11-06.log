@@ -1,0 +1,15 @@
+{"filename":"paymentController.js","level":"error","message":"Error updating corporate order:","timestamp":"2024-11-05T19:27:14.463Z","userId":"C000007"}
+{"filename":"paymentController.js","level":"error","message":"Error updating corporate order:","timestamp":"2024-11-05T20:11:25.189Z","userId":"No userId"}
+{"filename":"paymentController.js","level":"error","message":"Error updating corporate order:","timestamp":"2024-11-05T20:11:25.221Z","userId":"No userId"}
+{"filename":"paymentController.js","level":"error","message":"Error updating corporate order:","timestamp":"2024-11-05T20:14:00.064Z","userId":"No userId"}
+{"filename":"paymentController.js","level":"error","message":"Error updating corporate order:","timestamp":"2024-11-05T20:14:00.077Z","userId":"No userId"}
+{"error":"insert or update on table \"corporateorder_details\" violates foreign key constraint \"corporateorder_details_category_id_fkey\"","filename":"corporateorderModels.js","level":"error","message":"Error inserting corporate order details:","timestamp":"2024-11-05T20:21:53.263Z","userId":"No userId"}
+{"error":"insert or update on table \"corporateorder_details\" violates foreign key constraint \"corporateorder_details_category_id_fkey\"","filename":"corporateorderController.js","level":"error","message":"Error adding corporate order details","timestamp":"2024-11-05T20:21:53.264Z","userId":"No userId"}
+{"filename":"paymentController.js","level":"error","message":"Error updating corporate order:","timestamp":"2024-11-05T20:22:59.544Z","userId":"No userId"}
+{"filename":"paymentController.js","level":"error","message":"Error updating corporate order:","timestamp":"2024-11-05T20:22:59.602Z","userId":"No userId"}
+{"filename":"paymentController.js","level":"error","message":"Error updating corporate order:","timestamp":"2024-11-05T20:38:09.275Z","userId":"C000008"}
+{"filename":"paymentController.js","level":"error","message":"Error updating corporate order:","timestamp":"2024-11-05T20:38:09.305Z","userId":"C000008"}
+{"filename":"paymentController.js","level":"error","message":"Error updating corporate order:","timestamp":"2024-11-05T20:39:41.506Z","userId":"C000008"}
+{"filename":"paymentController.js","level":"error","message":"Error updating corporate order:","timestamp":"2024-11-05T20:39:41.523Z","userId":"C000008"}
+{"error":"insert or update on table \"corporateorder_details\" violates foreign key constraint \"corporateorder_details_category_id_fkey\"","filename":"corporateorderModels.js","level":"error","message":"Error inserting corporate order details:","timestamp":"2024-11-05T20:45:52.173Z","userId":"C000008"}
+{"error":"insert or update on table \"corporateorder_details\" violates foreign key constraint \"corporateorder_details_category_id_fkey\"","filename":"corporateorderController.js","level":"error","message":"Error adding corporate order details","timestamp":"2024-11-05T20:45:52.176Z","userId":"C000008"}

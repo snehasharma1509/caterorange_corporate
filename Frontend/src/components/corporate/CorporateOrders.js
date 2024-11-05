@@ -355,6 +355,7 @@ const CorporateOrders = () => {
         'http://localhost:4000/customer/getcategorynameById',
         { categoryId }
       );
+     console.log("hi",response.data.categoryname.category_name)
       return response.data.categoryname.category_name;
     } catch (error) {
       console.error('Error fetching category name:', error);

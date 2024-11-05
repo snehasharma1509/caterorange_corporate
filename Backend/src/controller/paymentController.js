@@ -49,7 +49,6 @@ const payment = async (req, res) => {
 
     // Now update the corporate order with the generated payment_id
     await updateCorporateOrder(order_id, generatedPaymentId, payment_status);
-    await deleteCorporateCart(customer_id)
     res.status(200).json({ payment_id: generatedPaymentId });
   } catch (error) {
     logger.error("Error inserting payment data: ", error);
@@ -115,7 +114,9 @@ const getOrdergenId = async (req, res) => {
     }
 
     const customer_id = verified_data.id;
+    await deleteCorporateCart(customer_id)
     const order_generated_id = await paymentmodel.getOrdergenId(customer_id);
+    
 
     res.status(200).json({ order_genid: order_generated_id });
   } catch (error) {

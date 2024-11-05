@@ -232,7 +232,6 @@ const transferCartToOrder = async (req, res) => {
 // Get category name by ID
 const getcategorynameById = async (req, res) => {
   const { categoryId } = req.body;
-
   try {
     const categoryname = await corporate_model.getcategoryname(categoryId);
     logger.info('Fetched category name', { categoryId });
