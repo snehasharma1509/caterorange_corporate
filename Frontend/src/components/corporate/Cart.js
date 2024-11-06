@@ -200,13 +200,13 @@ useEffect(() => {
 
  useEffect(() => {
  if (cartIndividualData.length > 0) {
- console.log('each data', cartIndividualData);
  const flattenedData = cartIndividualData.map(cart => ({
  id: cart.id,
  ...cart.content
  }));
+
+
  const sortedCartItems = flattenedData.sort((a, b) => new Date(a.date) - new Date(b.date));
- console.log('sorted', sortedCartItems);
  setSortedData(sortedCartItems);
  }
  }, [cartIndividualData]);
@@ -289,7 +289,7 @@ console.log('id',sortedData)
         const content = sortedData[i];
 
         const Data = {
-        category_name: content.type,
+        category_id: content.category_id,
         processing_date: content.date,
         delivery_status: 'shipped',
         quantity: content.quantity,
@@ -485,7 +485,6 @@ const handleQuantityChange = (index, value) => {
 
 };
 
- console.log("hello",userAddressDetails.address)
 
  const isDisabled = userAddressDetails.address === '' || sortedData.length === 0;
 
